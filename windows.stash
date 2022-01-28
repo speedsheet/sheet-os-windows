@@ -1,0 +1,368 @@
+# Windows
+
+
+# Start in Safe Mode
+
+<cb>F8<>
+
+F8 - Press F8 immediately when windows starts.
+
+
+
+
+# Applications
+@
+@ Apps
+
+
+
+# Registry Editor
+
+Exe Name:
+
+<cb>regedit.exe<>
+
+
+
+# Scheduler
+
+Scheduled Tasks - Applying/Running tasks without a password
+
+For Pro: Go to
+
+<cb>Start/Administrative Tools/'Local Security Policy/Security Settings/Local Policies/Security Options<>
+
+Accounts: Limit local account use of blank passwords to console logon only. This is enabled by default, disable it.
+
+
+
+# Windows Explorer
+
+
+
+### Windows Explorer - Search By Name
+
+<cb>name: <v>file_name<><>
+
+
+Enter into the search box.
+@
+@ file
+
+
+
+### Windows Explorer - Search By Size
+
+<cb>size: > <v>size<> <v>units<><>
+
+
+Enter into the search box.
+
+
+Examples:
+
+<cb>size: > 100mb
+size: \\< 4kb<>
+@
+@ file
+
+
+
+### Windows Explorer - Search By Date
+
+<cb>datemodified: > <v>yyyy-mm-dd<><>
+
+<cb>datemodified: > <v>from<> .. <v>to<><>
+
+<cb>datemodified: > <v>yyyy-mm-dd<> .. <v>yyyy-mm-dd<><>
+
+<cb>datemodified: <v>named date<><>
+
+
+
+Enter into the search box.
+
+For date range, the format is from date ".." (2 dots) to date.
+
+
+Examples:
+
+<cb>datemodified: <v>this week<>
+datemodified: <v>2001-12-31<>
+datemodified: <v>2000-01-01<> .. <v>2001-12-31<><>
+@
+@ file
+
+
+# How To
+
+
+### Keyboard - Shortcut Settings
+
+<card>Settings
+-> Device (icon)
+-> Typing (left nav)
+-> Avanced keyboard settings (link)
+-> Language bar options (link)
+-> Advanced Key Settings (tab)<>
+
+
+
+### Password - Remove Expiration
+
+Command Prompt (Admin Mode)
+
+<cb>wmic path Win32_UserAccount where Name='<v>UserName<>' set PasswordExspires=false<>
+
+- or -
+
+Not for Windows Home Premium!:
+
+<card>Open "Local USers and Groups Manager"
+(C:\\Windows\\System32\\lusrmgr.msc)
+-> Users (left navigation box)
+-> <v>UserName<> (right list box)
+-> Check "Password never expires".<>
+
+
+
+### Window Snap - Settings
+
+<card>Windows Settings
+-> System
+-> Multitasking<>
+
+
+
+### Snap - Thumbnails Disable
+
+<card>Windows Settings
+-> System
+-> Multitasking
+-> Section:Snap
+
+Switch Off:
+"When I snap a window, show what I can snap next to it"<>
+
+
+
+### Start - Safemode
+
+<card>Tap F8<>
+
+
+
+### Virtual Screen - Close
+
+<cb>Windows ⊞ + Control + F4<>
+
+
+
+### Virtual Screen - Create
+
+<card>Task Bar
+-> icon: Task View
+-> Lower Right: New Window<>
+
+- Or -
+
+<card>Open Views ("Virtual Screens - View All" (below))
+
+"+ New Desktop"<>
+
+
+
+### Virtual Screen - Switch
+
+Left Window:
+
+<cb>Windows ⊞ + Control + Left Arrow  ←<>
+
+Right Window:
+
+<cb>Windows ⊞ + Control + Right Arrow  →<>
+
+
+
+### Virtual Screens - View All
+
+<cb>Windows ⊞ + Tab<>
+
+Win. Explorer - Open Dir
+
+<cb>c:\\Windows\\SysWOW64\\Explorer.exe <v>folder_name<><>
+
+
+
+# Reference - Apps
+
+
+### App - Computer Manager
+
+<cb>mmc C:/Windows/system32/compmgmt.msc /s<>
+
+
+
+### App - Device Manager
+
+<cb>mmc C:/Windows/system32/devmgmt.msc /s<>
+
+
+
+### App - Program Install / Uninstall
+
+<cb>control appwiz.cpl<>
+
+
+
+### App - Registry Editor
+
+<cb>C:/Windows/SysWOW64/regedit.exe<>
+
+
+
+### App - Services
+
+<cb>mmc C:/Windows/system32/services.msc<>
+@
+@ services.msc
+
+
+
+### App - System Info
+
+<cb>%windir%/system32/msinfo32.exe<>
+@
+@ sysinfo, msinfo32.exe
+
+
+
+### App - Snipping Tool
+
+
+
+
+### App - Task Manager
+
+<cb>C:/Windows/SysWOW64/taskmgr.exe<>
+
+
+
+### App - Task Scheduler
+
+<cb>mmc %windir%/system32/taskschd.msc /s<>
+
+
+
+# Reference - Environment Vars
+
+
+
+
+### Variable - User App Dir
+
+<cb>APPDATA<>
+
+Example Value:
+
+<cb>C:\\Users\\<v>UserName<>\\AppData\\Roaming<>
+
+
+
+### Variable - User Home Dir
+
+<cb>HOMEPATH<>
+
+Example Value:
+
+<cb>C:\\Users\\<v>UserName<><>
+
+
+
+### Variable - User Temp Dir
+
+<cb>TEMP<>
+
+<cb>TMP<>
+
+Example Value:
+
+<cb>C:\\Users\\<v>UserName<>\\AppData\\Local\\Temp<>
+
+
+
+# Reference - Files
+
+
+### File - Hosts
+
+<cb>C:\\Windows\\System32\\drivers\\etc\\hosts<>
+
+
+
+# Reference - Folders
+
+
+### Folder - System - File New Templates
+
+<cb>C:\\Windows\\ShellNew<>
+
+
+
+### Folder - Program - App Data
+
+Windows Vista, Windows 7:
+
+<cb>C:\\ProgramData<>
+
+Windows XP:
+
+<cb>C:\\Documents and Settings\\All Users<>
+
+
+
+### Folder - User - App Data
+
+<cb>C:\\Users\\<v>UserName<>\\AppData\\Roaming<>
+
+
+
+### Folder - User - Home Dir
+
+<cb>C:\\Users\\<v>UserName<><>
+
+
+
+### Folder - User - Temp Dir
+
+<cb>C:\\Users\\<v>UserName<>\\AppData<>
+
+
+
+# Reference - Registry
+
+
+### User - Run
+
+<cb>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run<>
+
+
+### User - Run Once
+
+<cb>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce<>
+
+
+### Local Machine - Run
+
+<cb>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run<>
+@
+@ all
+
+
+### Local Machine - Run Once
+
+<cb>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce<>
+@
+@ all
+
+
