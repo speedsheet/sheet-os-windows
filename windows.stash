@@ -366,3 +366,11 @@ Windows XP:
 @ all
 
 
+
+# Terms
+
+
+### Windows Subsytem for Linux (WSL)
+Allows Linux binaries to run natively under Windows.
+
+
